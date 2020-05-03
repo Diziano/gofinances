@@ -18,7 +18,11 @@ interface FileProps {
   readableSize: string;
 }
 
-const Import: React.FC = () => {
+interface Props {
+  toggleTheme(): void;
+}
+
+const Import: React.FC<Props> = ({ toggleTheme }) => {
   const [uploadedFiles, setUploadedFiles] = useState<FileProps[]>([]);
   const history = useHistory();
 
@@ -49,7 +53,7 @@ const Import: React.FC = () => {
 
   return (
     <>
-      <Header size="small" />
+      <Header size="small" toggleTheme={toggleTheme} />
       <Container>
         <Title>Importar uma transação</Title>
         <ImportFileContainer>

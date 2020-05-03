@@ -5,10 +5,14 @@ import { Switch, Route } from 'react-router-dom';
 import Dashboard from '../pages/Dashboard';
 import Import from '../pages/Import';
 
-const Routes: React.FC = () => (
+interface Props {
+  toggleTheme(): void;
+}
+
+const Routes: React.FC<Props> = ({ toggleTheme }) => (
   <Switch>
-    <Route path="/" exact component={Dashboard} />
-    <Route path="/import" component={Import} />
+    <Route path="/" exact component={() => (<Dashboard toggleTheme={toggleTheme} />)} />
+    <Route path="/import" component={() => (<Import toggleTheme={toggleTheme} />)} />
   </Switch>
 );
 

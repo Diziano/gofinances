@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import { unstable_batchedUpdates } from 'react-dom';
 import income from '../../assets/income.svg';
 import outcome from '../../assets/outcome.svg';
 import total from '../../assets/total.svg';
@@ -31,7 +30,11 @@ interface Balance {
   total: string;
 }
 
-const Dashboard: React.FC = () => {
+interface Props {
+  toggleTheme(): void;
+}
+
+const Dashboard: React.FC<Props> = ({ toggleTheme }) => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [balance, setBalance] = useState<Balance>({} as Balance);
 
@@ -60,7 +63,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <>
-      <Header />
+      <Header toggleTheme={toggleTheme} />
       <Container>
         <CardContainer>
           <Card>
