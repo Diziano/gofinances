@@ -105,8 +105,11 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 
 ```bash
 
-    # instalar as dependências
+    # Instalar as dependências
     $ yarn
+    
+    # Executar migrations para criação das tabelas nas base de dados
+    $ yarn typeorm migration:run
 
     # Iniciar o projeto
     $ yarn start
