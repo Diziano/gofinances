@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="github_explorer" title="github_explorer" src=".github/logo.svg" width="300px" />
+    <img alt="gofinances" title="gofinances" src=".github/logo.svg" width="300px" />
 </h1>
 
 <p align="center">
@@ -22,10 +22,8 @@
 
 <br/>
 
-
 <h3>
-  <img alt="github_explorer" title="github_explorer" src=".github/desktop.gif" width="69%" />
-  <img alt="github_explorer" title="github_explorer" src=".github/mobile.gif" width="30.1%" />
+  <img alt="gofinances" title="gofinances" src=".github/desktop.gif" width="100%" />
 </h3>
 
 <br/>
