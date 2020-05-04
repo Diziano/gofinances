@@ -43,12 +43,23 @@
 ## :rocket: Tecnologias
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
+#### Front-end
 - [ReactJS](https://github.com/facebook/react)
 - [TypeScript](https://github.com/microsoft/TypeScript)
 - [styled-components](https://github.com/styled-components/styled-components)
 - [axios](https://github.com/axios/axios)
 - [ESLint](https://github.com/eslint/eslint)
 - [Prettier](https://github.com/prettier/prettier)
+
+#### Back-end
+
+- [Node.js](https://nodejs.org/en)
+- [TypeScript](https://github.com/microsoft/TypeScript)
+- [Express](https://github.com/expressjs/express)
+- [TypeORM](https://github.com/typeorm/typeorm)
+- [ESLint](https://github.com/eslint/eslint)
+- [Prettier](https://github.com/prettier/prettier)
+
 
 <br/>
 
@@ -72,7 +83,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 
 <br/>
 
-## :gear: Como executar
+### :gear: Como executar
 
 
 ```bash
@@ -80,12 +91,17 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
     # Clonar o repositório
     $ git clone https://github.com/diziano/gofinances.git
 
-     # Navegar para o diretório
+    # Navegar para o diretório
     $ cd gofinances
 
 ```
+#### Back-end
 
-### Front-end
+- No arquivo [ormconfig.json](ormconfig.json) configure os parâmetros de acesso ao banco de dados (username, password e database);
+
+- No arquivo [src/database/index.jsormconfig.json](src/database/index.jsormconfig.json) o nome do banco de dados dos testes (gofinances_tests);
+
+- Para alterações do banco de dados aconselha-se utilizar a CLI do TypeORM: <code>yarn typeorm {seu comando}</code>. Confira a documentação [aqui](https://typeorm.io/).
 
 ```bash
 
@@ -94,6 +110,29 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 
     # Iniciar o projeto
     $ yarn start
+    
+    # Iniciar o projeto em desenvolvimento
+    $ yarn dev:server
+    
+    # Executar testes
+    $ yarn test
+```
+
+#### Front-end
+
+```bash
+
+    # instalar as dependências
+    $ yarn
+
+    # Iniciar o projeto
+    $ yarn start
+   
+    # Executar testes
+    $ yarn test
+    
+    # Executar build
+    $ yarn build
 ```
 
 <br/>
