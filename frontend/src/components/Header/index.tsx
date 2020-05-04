@@ -21,6 +21,7 @@ const Header: React.FC<HeaderProps> = ({ size = 'large', toggleTheme }: HeaderPr
     <Container size={size}>
       <header>
         <img src={Logo} alt="GoFinances" />
+
         <nav>
           <NavLink to="/" exact activeClassName="active">
             Listagem
@@ -29,6 +30,7 @@ const Header: React.FC<HeaderProps> = ({ size = 'large', toggleTheme }: HeaderPr
             Importar
           </NavLink>
         </nav>
+
         <Switch
           onChange={toggleTheme}
           checked={title === 'dark'}
@@ -39,6 +41,7 @@ const Header: React.FC<HeaderProps> = ({ size = 'large', toggleTheme }: HeaderPr
           handleDiameter={20}
           offColor={shade(0.15, colors.primary)}
           onColor={colors.secundary}
+          className="switch"
         />
       </header>
     </Container>

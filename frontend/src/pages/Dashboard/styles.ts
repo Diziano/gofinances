@@ -26,10 +26,11 @@ export const CardContainer = styled.section`
 
 export const Card = styled.div`
 
-  background: ${({ total, theme }: CardProps): string => (total ? '#FF872C' : theme.colors.box )};
+  background-color: ${({ total, theme }: CardProps): string => (total ? '#FF872C' : theme.colors.box )};
   padding: 22px 32px;
   border-radius: 5px;
   color: ${({ total, theme }: CardProps): string => (total ? '#fff' : theme.colors.text )};
+  transition: background-color 0.4s color 0.4s;
 
   header {
     display: flex;
@@ -63,6 +64,7 @@ export const TableContainer = styled.section`
       text-align: left;
       font-size: 16px;
       line-height: 24px;
+      transition: color 0.5s;
     }
 
     td {
@@ -72,6 +74,7 @@ export const TableContainer = styled.section`
       font-size: 16px;
       font-weight: normal;
       color: ${props => props.theme.colors.textSecondary};
+      transition: background-color 0.4s color 0.4s;
 
       &.title {
         color: ${props => props.theme.colors.text} ;
@@ -94,4 +97,9 @@ export const TableContainer = styled.section`
       border-radius: 0 8px 8px 0;
     }
   }
+`;
+
+export const Message = styled.div`
+  margin-top: 64px;
+  color: ${props => props.theme.colors.text}
 `;

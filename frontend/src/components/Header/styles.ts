@@ -5,8 +5,9 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
-  background: ${props => props.theme.colors.primary};
+  background-color: ${props => props.theme.colors.primary};
   padding: 30px 0;
+  transition: background-color 0.5s;
 
   header {
     width: 1120px;
@@ -42,5 +43,13 @@ export const Container = styled.div<ContainerProps>`
         }
       }
     }
+  }
+
+  .switch:before {
+    content: 'Dark:';
+    position: absolute;
+    top: -3px;
+    right: 60px;
+    color: #FFF;
   }
 `;

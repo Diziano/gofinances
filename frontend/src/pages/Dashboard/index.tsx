@@ -11,7 +11,7 @@ import Header from '../../components/Header';
 import formatValue from '../../utils/formatValue';
 import formatDate from '../../utils/formatDate';
 
-import { Container, CardContainer, Card, TableContainer } from './styles';
+import { Container, CardContainer, Card, TableContainer, Message } from './styles';
 
 interface Transaction {
   id: string;
@@ -56,10 +56,14 @@ const Dashboard: React.FC<Props> = ({ toggleTheme }) => {
       setBalance(balanceData);
 
       setTransactions(transactionsData);
+
+      console.log(transactions);
     }
 
     loadTransactions();
   }, []);
+
+
 
   return (
     <>
@@ -95,7 +99,7 @@ const Dashboard: React.FC<Props> = ({ toggleTheme }) => {
           </Card>
         </CardContainer>
 
-        {transactions && (
+        { transactions.length && (
           <TableContainer>
             <table>
               <thead>
@@ -122,6 +126,8 @@ const Dashboard: React.FC<Props> = ({ toggleTheme }) => {
               </tbody>
             </table>
           </TableContainer>
+        ) || (
+          <Message>Nenhuma transação para exibir.</Message>
         )}
       </Container>
     </>
